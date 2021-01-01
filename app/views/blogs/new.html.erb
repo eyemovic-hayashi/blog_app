@@ -1,0 +1,13 @@
+<%= form_with model: @blog, url: "#", local: true do |f| %>
+  <div class="form_wrap">
+    <div class="tittle_name">タイトル</div>
+      <%= f.text_field :tittle, class:"form_tittle", placeholder:"タイトル" %>
+    <div class="text_name">本文</div>
+      <%= f.text_area :text, class:"form_text", placeholder:"本文を入力してください" %>
+    <div class="submit_btn">
+      <%= f.submit "投稿", class:"btn btn-primary" %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to "トップページに戻る", root_path %>
